@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdf1e7020d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="icon" type="image/png" href="assets/media/favicon/icon.png">
+    <title>Consultar IP - Consulta de Endereço IP</title>
+</head>
+<body>
+    <header>
+        <div class="container-primary flex-item">
+            <div class="container-title flex-item">
+                <span class="icon flex-item">C</span>
+                <span class="title">Consultar IP</span>
+            </div>
+            <hr class="separator">
+            <ul class="list-links flex-item">
+                <li><a href="#inicio" class="link">Início</a></li>
+                <li><a href="#sobre" class="link">Sobre</a></li>
+                <li><a href="/seguranca" target="_blank" class="link">Segurança</a></li>
+                <li><a href="/privacidade" target="_blank" class="link">Privacidade</a></li>
+            </ul>
+        </div>
+        <div class="container-secondary flex-item">
+            <div class="container-mobile">
+                <button class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <ul class="flex-item">
+                <li>
+                    <a href="#inicio" class="query-list">
+                        Consultar <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https:github.com/mathynz" target="_blank" class="github flex-item">
+                        Siga-nos <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-search flex-item" id="inicio">
+        <div class="container-primary flex-item">
+            <h1 class="title">Consultar endereço IP</h1>
+            <p class="desc">Insira o endereço IP que deseja consultar no campo abaixo para obter informações detalhadas sobre sua localização, provedor de internet, fuso horário e outros dados relevantes de forma rápida e prática.</p>
+            <hr class="separator">
+            <form action="/consultar" method="POST" class="flex-item">
+                <input type="text" name="ip" placeholder="Endereço IP">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            {% if data %}
+            <ul class="options flex-item">
+                <li>
+                    <a href="#copiar" class="copy" id="copyDataIp">
+                        <i class="fa-solid fa-copy"></i> Copiar
+                    </a>
+                </li>
+                <li>
+                    <a href="#download" class="download" id="downloadDataIp">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+        <div class="container-secondary flex-item" id="consulta">
+            <section class="data">
+                <p class="info" id="dataIp">
+{% if data %}
+Consulta: "{{ data.query }}",<br>
+Sucesso: "{{ data.status }}",<br>
+Continente: "{{ data.continent }}",<br>
+CodigoContinente: "{{ data.continentCode }}",<br>
+Pais: "{{ data.country }}",<br>
+CodigoPais: "{{ data.countryCode }}",<br>
+Regiao: "{{ data.region }}",<br>
+NomeRegiao: "{{ data.regionName }}",<br>
+Cidade: "{{ data.city }}",<br>
+Distrito: "{{ data.district }}",<br>
+CEP: "{{ data.zip }}",<br>
+Latitude: {{ data.lat }},<br>
+Longitude: {{ data.lon }},<br>
+FusoHorario: "{{ data.timezone }}",<br>
+Offset: {{ data.offset }},<br>
+Moeda: "{{ data.currency }}",<br>
+ProvedorInternet: "{{ data.isp }}",<br>
+Organizacao: "{{ data.org }}",<br>
+SistemaAutonomo: "{{ data.as }}",<br>
+NomeAS: "{{ data.asname }}",<br>
+DNSReverso: "{{ data.reverse }}",<br>
+Movel: {{ data.mobile }},<br>
+Proxy: {{ data.proxy }},<br>
+Hospedagem: {{ data.hosting }}
+{% endif %}
+                </p>
+            </section>
+        </div>
+    </div>
+    <hr>
+    <div class="container-start flex-item" id="sobre">
+        <div class="container-details flex-item">
+            <h1 class="title">Consulta de Endereço IP</h1>
+            <span class="desc">IP (Internet Protocol) é o identificador numérico atribuído a cada dispositivo conectado à internet, permitindo comunicação entre máquinas em uma rede.</span>
+            <hr class="separator">
+            <button class="about-more">
+                <a href="https://pt.wikipedia.org/wiki/Endere%C3%A7o_IP" target="_blank" class="link flex-item">
+                    Saiba mais <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </button>
+        </div>
+        <div class="container-banner flex-item">
+            <img src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="banner">
+            <span class="author flex-item">&copy; Foto de Pixabay</span>
+        </div>
+    </div>
+    <hr class="separator">
+    <footer>
+        <div class="container-main flex-item">
+            <div class="container-copyright">
+                <span class="copyright">Todos os Direitos Reservados.</span>
+            </div>
+            <div class="container-links">
+                <ul class="list-links flex-item">
+                    <li><a href="#inicio" class="link">Início</a></li>
+                    <li><a href="#sobre" class="link">Sobre</a></li>
+                    <li><a href="/seguranca" target="_blank" class="link">Segurança</a></li>
+                    <li><a href="/privacidade" target="_blank" class="link">Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/js/copy.js"></script>
+    <script src="../static/js/download.js"></script>
+</body>
+</html>

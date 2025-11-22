@@ -1,0 +1,392 @@
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator {
+    margin: 100px 0;
+    width: 100%;
+}
+
+* {
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+header .container-primary {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+header .container-primary .container-title {
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+header .container-primary .container-title .icon {
+    background-color: black;
+    font-family: "Poppins";
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    height: 20px;
+    width: 20px;
+}
+
+header .container-primary .container-title .title {
+    font-size: 18px;
+    font-weight: 800;
+    font-family: "Poppins";
+}
+
+header .container-primary .separator {
+    width: 1px;
+    height: 30px;
+    margin: 0;
+}
+
+header .container-secondary {
+    gap: 15px;
+}
+
+header .container-secondary ul {
+    gap: 15px;
+}
+
+header .container-primary .list-links {
+    gap: 15px;
+}
+
+header .container-primary .list-links .link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+header .container-primary .list-links .link:hover {
+    color: #555555;
+}
+
+header .container-secondary .container-mobile .menu {
+    background: none;
+    border: none;
+    font-size: 18px;
+    display: none;
+}
+
+header .container-secondary ul li .query-list {
+    font-size: 15px;
+}
+
+header .container-secondary ul li .github {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: 0.2s;
+    gap: 5px;
+}
+
+header .container-secondary ul li .github:hover {
+    background-color: white;
+    transition: 0.2s;
+    color: black;
+}
+
+.container-start {
+    padding-top: 100px;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.container-start .container-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1;
+}
+
+.container-start .container-details .title {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Poppins";
+}
+
+.container-start .container-details .desc {
+    font-size: 18px;
+    color:  #555555;
+}
+
+.container-start .container-details .separator {
+    width: 150px;
+    margin: 0;
+}
+
+.container-start .container-details .about-more {
+    background-color: black;
+    border-radius: 6px;
+    padding: 15px 20px;
+    border: 1px solid black;
+    transition: 0.2s;
+}
+
+.container-start .container-details .about-more:hover {
+    background-color: white;
+    transition: 0.2s;
+}
+.container-start .container-details .about-more:hover a {
+    color: black;
+}
+
+.container-start .container-details .about-more a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.container-start .container-details .about-more a i {
+    font-size: 18px;
+}
+
+.container-start .container-banner {
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.container-start .container-banner .banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(50%);
+}
+
+.container-start .container-banner .author {
+    font-size: 15px;
+    font-weight: 600;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.container-search {
+    padding: 100px 0;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.container-search .container-primary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+.container-search .container-primary .title {
+    font-size: 28px;
+    font-weight: 800;
+    font-family: "Poppins";
+}
+
+.container-search .container-primary .desc {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.container-search .container-primary .separator {
+    width: 150px;
+    margin: 0;
+}
+
+.container-search .container-primary form input {
+    width: 300px;
+    height: 60px;
+    border: none;
+    font-size: 15px;
+    padding-left: 30px;
+    background-color: #f7f7f7;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.container-search .container-primary form input:focus {
+    outline: none;
+}
+
+.container-search .container-primary form button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #f7f7f7;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.container-search .container-primary .options {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.container-search .container-primary .options li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid gainsboro;
+}
+
+.container-search .container-secondary {
+    flex: 1;
+}
+
+.container-search .container-secondary .data {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    background-color: black;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.container-search .container-secondary .data .info {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    color: green;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+footer .container-main {
+    justify-content: space-between;
+}
+
+footer .container-main .container-copyright .copyright {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins";
+}
+
+footer .container-main .container-links .list-links {
+    gap: 15px;
+}
+
+footer .container-main .container-links .list-links li .link {
+    font-size: 15px;
+}
+
+@media (max-width: 800px) {
+    header .container-primary .separator,
+    header .container-primary ul,
+    header .container-secondary ul {
+        display: none;
+    }
+
+    header .container-secondary .container-mobile .menu {
+        display: block;
+    }
+
+    .container-start {
+        flex-direction: column;
+    }
+
+    .container-start .container-banner {
+        width: 100%;
+    }
+
+    .container-search {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .container-search .container-primary {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-search .container-primary .title,
+    .container-search .container-primary .desc {
+        text-align: center;
+    }
+
+    .container-search .container-primary .options {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container-search .container-secondary {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container-search .container-secondary .data {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    footer .container-main {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container-search .container-primary {
+        align-items: flex-start;
+    }
+
+    .container-search .container-primary .title,
+    .container-search .container-primary .desc {
+        text-align: left;
+    }
+    
+    .container-search .container-primary form,
+    .container-search .container-primary form input {
+        width: 100%;
+    }
+    
+    footer .container-main .container-links .list-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
